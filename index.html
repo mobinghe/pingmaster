@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سرویس کاهش پینگ | PingMaster</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    header {
+      background-color: #0f62fe;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .dark-mode section {
+      background: #1e1e1e;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .toggle-theme {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      padding: 0.5rem 1rem;
+      background: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .dark-mode .toggle-theme {
+      background: #333;
+      color: white;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button[type="submit"] {
+      background-color: #0f62fe;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-theme" onclick="toggleTheme()">تغییر حالت</button>
+  <header>
+    <h1>PingMaster</h1>
+    <nav>
+      <a href="#plans">پلن‌ها</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">ارتباط با ما</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>درباره سرویس</h2>
+    <p>ما در PingMaster سرویس کاهش پینگ و افزایش کیفیت اتصال شما به سرورهای خارجی را فراهم می‌کنیم.</p>
+  </section>
+
+  <section id="plans">
+    <h2>پلن‌های اشتراک</h2>
+    <ul>
+      <li>پلن ۱ ماهه - ۵۹ هزار تومان</li>
+      <li>پلن ۳ ماهه - ۱۴۹ هزار تومان</li>
+      <li>پلن ۶ ماهه - ۲۶۹ هزار تومان</li
