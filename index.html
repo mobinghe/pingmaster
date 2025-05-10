@@ -3,182 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سرویس کاهش پینگ | PingMaster</title>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <title>پنل مدیریت</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       margin: 0;
-      font-family: 'Vazirmatn', sans-serif;
-      background-color: #f0f2f5;
-      color: #333;
-      transition: background 0.3s, color 0.3s;
-    }
-    .dark-mode {
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-    header {
-      background: linear-gradient(135deg, #0f62fe, #004cbf);
-      color: white;
-      padding: 2rem 1rem 1rem;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    nav {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-    nav a:hover {
-      background: rgba(255,255,255,0.15);
-    }
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      transition: background 0.3s;
-    }
-    .dark-mode section {
-      background: #1f1f1f;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    .toggle-theme {
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      padding: 0.6rem 1.2rem;
-      background: #fff;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: background 0.3s, color 0.3s;
-      z-index: 999;
-    }
-    .dark-mode .toggle-theme {
-      background: #333;
-      color: white;
-    }
-    h2 {
-      color: #0f62fe;
-    }
-    ul {
-      list-style: none;
       padding: 0;
     }
-    li {
-      background: #eef3ff;
-      margin: 0.5rem 0;
-      padding: 1rem;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .dark-mode li {
-      background: #2a2a2a;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    label {
-      margin-bottom: 0.3rem;
-    }
-    input, textarea {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 1.2rem;
-      font-family: inherit;
-      font-size: 1rem;
-    }
-    button[type="submit"] {
-      background: #0f62fe;
+    header {
+      background-color: #333;
       color: white;
-      border: none;
-      padding: 0.8rem 1.5rem;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
       border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    button[type="submit"]:hover {
-      background: #004cbf;
+    table {
+      width: 100%;
+      border-collapse: collapse;
     }
+    table th, table td {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    .status {
+      padding: 0.5rem;
+      border-radius: 4px;
+    }
+    .active { background-color: #4CAF50; color: white; }
+    .inactive { background-color: #f44336; color: white; }
   </style>
 </head>
 <body>
-  <button class="toggle-theme" onclick="toggleTheme()">🌙 تغییر تم</button>
 
   <header>
-    <h1>PingMaster</h1>
-    <nav>
-      <a href="#plans">پلن‌ها</a>
-      <a href="#about">درباره ما</a>
-      <a href="#contact">ارتباط با ما</a>
-    </nav>
+    <h1>پنل مدیریت کاربران و تیکت‌ها</h1>
   </header>
 
-  <section id="about">
-    <h2>درباره سرویس</h2>
-    <p>ما در <strong>PingMaster</strong> با استفاده از سرورهای قدرتمند، کیفیت اتصال شما به بازی‌ها و سرورهای بین‌المللی را افزایش می‌دهیم و پینگ شما را کاهش می‌دهیم.</p>
-  </section>
-
-  <section id="plans">
-    <h2>پلن‌های اشتراک</h2>
-    <ul>
-      <li>🎮 پلن ۱ ماهه - ۵۹ هزار تومان</li>
-      <li>🚀 پلن ۳ ماهه - ۱۴۹ هزار تومان</li>
-      <li>💎 پلن ۶ ماهه - ۲۶۹ هزار تومان</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>ارتباط با ما</h2>
-    <form>
-      <label for="name">نام:</label>
-      <input type="text" id="name" name="name" placeholder="نام شما" required>
-
-      <label for="email">ایمیل:</label>
-      <input type="email" id="email" name="email" placeholder="example@email.com" required>
-
-      <label for="message">پیام:</label>
-      <textarea id="message" name="message" rows="4" placeholder="پیام خود را اینجا بنویسید..." required></textarea>
-
-      <button type="submit">📩 ارسال پیام</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 PingMaster. تمامی حقوق محفوظ است.</p>
-  </footer>
-
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
-</body>
-</html>
-
+  <div class="container">
+    <h2>مدیریت کاربران</h2
